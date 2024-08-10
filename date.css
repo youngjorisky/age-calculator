@@ -21,13 +21,15 @@ body{
     display: flex;
     flex-direction: row;
     gap: 15px;
+
 }
 input{
     width: 90px;
     height: 50px;
     padding-left: 12px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 900;
+    font-style: bold;
     border-radius: 10px;
 }
 .inputs{
@@ -35,7 +37,8 @@ input{
 }
 p{
     margin-bottom: 5px;
-    font-weight: 700;
+    font-weight: 800;
+    font-size: 0.7rem;
     color: hsl(0, 1%, 44%);
 }
 #arrow-container{
@@ -45,11 +48,16 @@ p{
     justify-content: center;
     align-items: center;
 }
-#arrow{
+.arrow{
     border-radius: 50% 50%;
     background-color: hsl(259, 100%, 65%);
     padding: 15px;
     z-index: 2;
+    cursor: pointer;
+    transition: background-color 0.5s linear;
+}
+.arrow:hover{
+    background-color: black;
 }
 .line{
     background-color:  hsl(0, 0%, 86%);
@@ -65,6 +73,7 @@ p{
 i{
     font-size: 3rem;
     font-weight: 700;
+    color: hsl(0, 0%, 8%);
 }
 .coloured-numbers{
     color: hsl(259, 100%, 65%);
@@ -74,3 +83,10 @@ i{
     flex-direction: column;
     gap: 0;
 }
+.errormessage{
+    display: flex;
+    flex-direction: row;
+    color: red;
+    font-size: 0.5rem;
+}
+
