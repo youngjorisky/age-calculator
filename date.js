@@ -22,9 +22,32 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
 
    let isValid = true;
 
-    if ((isNaN(day) || day < 1 || day > 31) || 
+   if(dayInput.value === '' && monthInput.value === '' && yearInput.value === ''){
+    errorMessage1.textContent += "This field is required";
+    errorMessage2.textContent += "This field is required";
+    errorMessage3.textContent += "This field is required";
+    (errorMessage1 && errorMessage2 && errorMessage3).classList.add('errormessage');
+    givered1.style.color = "#FA3940";
+    givered2.style.color = "#FA3940";
+    givered3.style.color = "#FA3940";
+    dayInput.style.border = "1px solid red";
+    monthInput.style.border = "1px solid red";
+    yearInput.style.border = "1px solid red";
+    isValid = false;
+    }
+    else if((isNaN(day) || day < 1 || day > new Date(year, month, 0).getDate())) {
+        errorMessage1.textContent += "Must be a valid date";
+        (errorMessage1 && errorMessage2 && errorMessage3).classList.add('errormessage');
+        givered1.style.color = "#FA3940";
+        givered2.style.color = "#FA3940";
+        givered3.style.color = "#FA3940";
+        dayInput.style.border = "1px solid red";
+        monthInput.style.border = "1px solid red";
+        yearInput.style.border = "1px solid red";
+        isValid = false;
+    }else if((isNaN(day) || day < 1 || day > 31) || 
     (isNaN(month) || month < 1 || month > 12) || 
-    (isNaN(year) || year < 1900 || year > new Date().getFullYear())) {
+    (isNaN(year) || year < 1900 || year > new Date().getFullYear())){
         errorMessage1.textContent += "Must be a valid day";
         errorMessage2.textContent += "Must be a valid month";
         errorMessage3.textContent += "Must be a valid year";
@@ -36,7 +59,8 @@ document.getElementById('calculateBtn').addEventListener('click', function() {
         monthInput.style.border = "1px solid red";
         yearInput.style.border = "1px solid red";
         isValid = false;
-    }else{
+    }
+    else {
         givered1.style.color = "#716f6f";
         givered2.style.color = "#716f6f";
         givered3.style.color = "#716f6f";
