@@ -2,48 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="date.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Age calculator app</title>
 
 </head>
 <body>
-<div class="inputs">
-  <div class="Day">
-    <p>
-      DAY
-    </p>
-    <input placeholder="DD"></input>
-  </div>
-  
-  <div class="Month">
-    <p>
-      MONTH
-    </p>
-    <input placeholder="MM"></input>
+  <div class="container">
+    <div class="inputs">
+      <div class="set">
+        <p>
+          DAY
+        </p>
+        <input class="input-border-color" type="text" placeholder="DD"></input>
+      </div>
+      
+      <div class="set">
+        <p>
+          MONTH
+        </p>
+        <input class="input-border-color" type="text" placeholder="MM"></input>
+      </div>
+    
+      <div class="set">
+        <p>
+          YEAR
+        </p>
+        <input class="input-border-color" type="text" placeholder="YYYY"></input>
+      </div>
+    </div>
+      
+   
+    <div id="arrow-container">
+      <img id="arrow" src="./assets/images/icon-arrow.svg">
+      <div class="line"></div>
+    </div>
+    
+    <div class="results">
+      <i> <i class="coloured-numbers">
+        --
+      </i> years</i>
+      <i> <i class="coloured-numbers">
+        --
+      </i> months</i>
+      <i> <i class="coloured-numbers">
+        --
+      </i> days</i>
+    </div>
   </div>
 
-  <div class="Year">
-    <p>
-      YEAR
-    </p>
-    <input placeholder="YYYY"></input>
-  </div>
-</div>
-  
-<div class="line"></div>
-<img src="./assets/images/icon-arrow.svg">
-
-<div> -- years</div>
-<div>-- months</div>
-<div>-- days</div>
-  
-  
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://x.com/_youngjojo_">Jojo Young</a>.
-  </div>
+  </footer>
+  <style src="date.js"></style>
 </body>
 </html>
