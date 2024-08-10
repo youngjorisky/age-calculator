@@ -90,6 +90,14 @@ i{
     font-size: 0.5rem;
     font-style: italic;
 }
+.attribution{
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a{
+    color: hsl(228, 45%, 44%); 
+}
+
 @media(min-width: 1400px){
     body{
         display: flex;
